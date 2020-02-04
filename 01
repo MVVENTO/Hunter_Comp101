@@ -1,0 +1,55 @@
+for num in [2,4,6,8,10]:
+    print(num)
+    
+
+sum = 0
+for x in range(0,12,2):  # (start, stop, step)
+    print(x)
+    sum = sum + x
+
+print(x)
+
+
+print(sum)
+
+for c in "ABCD":
+    print(c)
+
+# range(stop)
+# range(start, stop)
+# range(start, stop, step)
+
+#int :
+# float: 
+#string: "hello world"
+#list :[3,1,4,'indigo']
+#class variable: turtles, pandas
+
+#ASCII tablexample :ord('a')
+#returns 97
+
+for c in range(65,90):
+    print(chr(c))
+
+message = "I love Python"
+newMessage = ""
+for c in message:
+    print(ord(c)) #print the Unicode of each number
+    print(chr(ord(c)+1)) #print the next character
+    newMessage = newMessage + chr(ord(c)+1)b # add to new Message
+print("The coded message is", newMessage)
+
+# encripted message : for I love python
+
+word = "zebra"
+codedWord = ""
+for ch in word:
+    offset = ord(ch) - ord('a')+ 1 # how many letters past
+    wrap = offset % 26 # if larger then 26, wrap back to 0 # % is remander opperator
+    newChar = chr(ord('a') + wrap) # cimpute the new letter
+    print(wrap, chr(ord)('a') + wrap)) # print the wrap
+    codedWord
+
+    # input function
+    # mess = input ('please enter')
+    #print 
