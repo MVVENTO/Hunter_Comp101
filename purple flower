@@ -1,0 +1,17 @@
+import turtle
+wn = turtle.Screen()             # Set up the window and its attributes
+wn.bgcolor("ivory")
+
+tess = turtle.Turtle()           # create tess and set some attributes
+tess.color("purple")
+tess.pensize(1)
+
+for i in range (150):           
+    tess.forward(0.5*i)
+    tess.penup()
+    tess.forward(0.5*i)
+    tess.pendown()
+    tess.left(110)
+    print()
+   
+wn.exitonclick()
