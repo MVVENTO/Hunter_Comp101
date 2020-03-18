@@ -1,0 +1,7 @@
+
+#This program prints: prompts the user for a message,
+# and then prints the message backwards. 
+
+msg = input("Enter a magical phrase: ") # Prompts user to enter a message
+print(msg)
+print(msg[::-1])
