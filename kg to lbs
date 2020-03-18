@@ -1,0 +1,15 @@
+
+#This program : Write a program that converts kilograms to pounds.
+#Your program should prompt the user for the number of kilograms and
+#then print out the number of pounds.
+
+
+
+
+
+#1. Input the distance in kilograms (call it kg)
+kg = float(input('Enter weight in kilograms: '))
+#2. Calculate weight in pounds as 0.621371*kg
+lbs = 2.20462262185 * kg
+#3. Output lbs
+print("Weight in pounds", lbs)
