@@ -1,0 +1,17 @@
+#This program : asks the user for a noun and two verbs 
+# and then Uses the words the user entered, and prints out a new sentence of the form:
+# If it VERB1 like a NOUN and VERB2 like a NOUN, it probably is a NOUN.
+	
+
+
+
+Noun = input('Enter a noun: ')
+Verb = input('Enter a verb: ')
+VERB2 = input('Enter another verb: ')
+template = ("If it Verb like a Noun and VERB2, it probably is a Noun".replace("Noun", Noun).replace("Verb", Verb).replace("VERB2", VERB2) )
+
+
+print(Noun)
+print(Verb)
+print(VERB2)
+print("New Sentence: {}".format(template))
