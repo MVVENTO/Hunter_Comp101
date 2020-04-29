@@ -1,0 +1,43 @@
+#Name : Melissa A Vento
+#Email: melissa.vento52@myhunter.cuny.edu
+#Date: April 14, 2020
+#This program :Modify the program from Lab 7 that displays shelter population
+#over time to: Ask the user to specify the input file,
+#Ask the user to specify the output file,
+
+#Convert the date column (which is stored as 'YYYYMMDD') to a datetime format recognized by pandas, for example if your dataframe is df, overwrite the 'Date' column to be:
+        #df["Date"] = pd.to_datetime(df["Date"].apply(str))
+        
+#Make a plot of the percent of absent students over time from the data in the input file, and
+#Store the plot in the output file the user specified.
+
+
+
+#Libraries for plotting and data processing:
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+#prompts user to enter name of input file
+file = input("Enter name of input file:")
+
+#Open the CSV file and store in pop and prompts user to enter name of input file 
+name = pd.read_csv(file)
+
+# prompts user to enter name of output file and store in hs
+hs = input("Enter name of output file:")
+
+#Convert the date column (which is stored as 'YYYYMMDD') to a datetime format recognized by pandas, for example if your dataframe is df, overwrite the 'Date' column to be:
+name["Date"] = pd.to_datetime(name["Date"].apply(str))    
+
+#Compute the fraction of the percent of absent students, and save as new column:
+name['% Absent'] = name['Absent']/name['Enrolled'] * 100
+
+
+#Create a plot of the percent of absent students over time :
+name.plot(x = 'Date', y = '% Absent')
+
+
+#Save to the file:  
+fig = plt.gcf()
+fig.savefig(hs)
