@@ -1,0 +1,19 @@
+//Name:  Your name here
+//Email:  Your email here
+//Date:  November 2019
+//My first program in C++
+
+#include <iostream>        //The built-in library for input/output
+using namespace std;
+
+int main ()
+{
+  int i;   //The index variable for the loop
+
+  //Loop will repeat 9 times:
+  for (i = 0; i < 9; i++)
+  {
+    cout << "I love CUNY\n";
+  }
+  return 0;
+}
