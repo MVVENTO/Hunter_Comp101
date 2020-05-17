@@ -1,0 +1,19 @@
+//Name: Melissa A Vento
+//Email: melissa.vento52@myhunter.cuny.edu
+//Date: May 5, 2020
+//My first program in C++
+
+#include <iostream>        //The built-in library for input/output
+using namespace std;
+
+int main ()
+{
+  int i;   //The index variable for the loop
+
+  //Loop will repeat 9 times:
+  for (i = 0; i < 9; i++)
+  {
+    cout << "I love CUNY\n";
+  }
+  return 0;
+}
