@@ -1,0 +1,23 @@
+
+//Name: Melissa A Vento
+//Email: melissa.vento52@myhunter.cuny.edu
+//Date: May 5, 2020
+//Write a C++ program program that asks the user for a number
+//and draws a triangle of that height and width using 'character graphics'.
+
+// template specialization
+#include <iostream>
+
+using namespace std;
+int main()
+{
+
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
