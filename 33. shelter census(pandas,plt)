@@ -1,0 +1,37 @@
+#Modified by:  Melissa A Vento
+#Name : Melissa A Vento
+#Email: melissa.vento52@myhunter.cuny.edu
+#Date: April 2, 2020
+#A program that:
+#asks the user to specify the input file,
+#ask the user to specify the output file,
+#make a plot of the fraction of the total population that are single
+#over time from the data in input file, and
+#store the plot in the output file the user specified.
+
+
+#Libraries for plotting and data processing:
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+#prompts user to enter name of input file
+file = input("Enter name of input file:")
+
+
+#Open the CSV file and store in pop and prompts user to enter name of input file 
+name = pd.read_csv(file)
+
+# prompts user to enter name of output file and store in hs
+hs = input("Enter name of output file:")
+
+#Compute the fraction of the population that are single, and save as new column:
+name['Fraction Single'] = name['Total Single Adults in Shelter']/name['Total Individuals in Shelter']
+
+#Create a plot of population that are single over time :
+name.plot(x = 'Date of Census', y = 'Fraction Single')
+
+#Save to the file:  
+fig = plt.gcf()
+fig.savefig(hs)
+
