@@ -1,0 +1,9 @@
+#Name: Melissa A Vento
+#Email: melissa.vento52@myhunter.cuny.edu
+#Date: May 7, 2020
+#Using Unix shell commands,
+#write a script that counts the number of .csv files
+#in current working directory.
+
+
+ls -l | grep ".csv" | wc -l
