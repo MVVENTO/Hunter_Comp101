@@ -1,0 +1,7 @@
+#This program : Prints out the message the user inputs five times
+#and surrounds them with three stars ***
+
+Message = input("Enter a message: ")
+for i in Message:
+    print("***",i,i,i,i,i,"***")
+
