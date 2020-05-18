@@ -1,0 +1,38 @@
+#Name: Melissa A Vento
+#Email: melissa.vento52@myhunter.cuny.edu
+#Date: April 29, 2020
+#This program : write a program that asks the user for the name of a CSV file,
+#name of the output file, and creates a map with markers
+#for all the traffic collisions from the input file.
+
+#Libraries for map and data processing:
+import folium
+import pandas as pd
+
+#prompts user to enter CSV file name: 
+file = input("Enter CSV file name: :")
+
+#Open the CSV file and store in pop and prompts user to enter name of input file 
+name = pd.read_csv(file)
+
+# prompts user to enter name of output file and store in hs
+hs = input("Enter output file::")
+
+#Create a map, centered (0,0), and zoomed out a bit:
+m = folium.Map(location=[0, 0],zoom_start=3)
+
+#To create a base map, simply pass your starting coordinates to Folium:
+mapNYC = folium.Map(location=[40.75, -74.125], zoom_start=10)
+
+#Creates markers for all the traffic collisions:
+for index,row in name.iterrows():
+    lat = row["LATITUDE"]
+    lon = row["LONGITUDE"]
+    name = row["TIME"]
+    tiles="Cartodb Positron",
+    newMarker = folium.Marker([lat, lon], popup=name)
+    newMarker.add_to(mapNYC)
+
+#create the .html file:
+mapNYC.save(outfile= hs)
+
