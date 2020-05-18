@@ -1,0 +1,9 @@
+
+#Name: Melissa A Vento
+#Email: melissa.vento52@myhunter.cuny.edu
+#Date: March 24, 2020
+#Write an Unix shell script that prints: Hello, Hunter College!!!
+
+#!/bin/bash
+echo " Hello, Hunter College!!!"
+
