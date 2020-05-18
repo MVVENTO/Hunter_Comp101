@@ -1,0 +1,24 @@
+#Name: Melissa A Vento
+#Email: melissa.vento52@hunter.cuny.edu
+#Date: March 4, 2020
+#This program :
+#1.  Ask the user for the number of cents as an integer (e.g. 99 not 0.99).
+#2.  Print out the number of quarters (quarters = cents // 25).
+#3.  Compute the remaining change (rem = cents % 25).
+#4.  Print out the number of dimes (dimes = rem // 10).
+#5.  Compute the remaining change (rem = rem % 10).
+#6.  Print out the number of nickels (nickels = rem // 5).
+#7.  Print out the remaining cents (cents = rem % 5).
+
+cents = int(input("Enter the number of cents: "))
+quarters = cents // 25
+rem = cents % 25
+dimes = rem // 10
+rem = rem % 10
+nickels = rem // 5
+remainder = cents = rem % 5
+
+print("Quarters:", quarters)
+print("Dimes:", dimes)
+print("Nickels:" ,nickels)
+print("Cents:" , remainder)
