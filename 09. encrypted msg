@@ -1,0 +1,19 @@
+#This program prints: prompts the user for a word,
+# and then prints the word with each letter shifted right by 16.
+
+msg = input("Enter a word: ") # Prompts user to enter a word
+print(msg)
+newMsg = "" 
+s = 16
+
+
+for i in range(len(msg)):
+    char = msg[i]
+    if (char.isupper()):
+        newMsg += chr((ord(char) + s-65) % 26 + 65)
+    else:
+        newMsg += chr((ord(char) + s - 97) % 26 + 97)
+   
+print("The coded message is", newMsg)
+
+
