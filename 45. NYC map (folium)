@@ -1,0 +1,24 @@
+
+ Download
+#Name: Melissa A Vento
+#Email: melissa.vento52@myhunter.cuny.edu
+#Date: April 29, 2020
+#This program : Write a program that uses folium to make a map of New York City.
+#Your map should be centered at (40.75, -74.125) and
+#include a marker for the main campus of Hunter College.
+#The HTML file your program creates should be called: nycMap.html
+
+#Libraries for map:
+import folium
+
+#Create a map, centered (0,0), and zoomed out a bit:
+mapWorld = folium.Map(location=[0, 0],zoom_start=3)
+
+#To create a base map, simply pass your starting coordinates to Folium:
+mapCUNY = folium.Map(location=[40.75, -74.125], zoom_start=10)
+
+#Creates marker for the main campus of Hunter College
+folium.Marker(location = [40.768731, -73.964915], popup = "Hunter College").add_to(mapCUNY)
+
+#create the .html file:
+mapCUNY.save(outfile='nycMap.html')
