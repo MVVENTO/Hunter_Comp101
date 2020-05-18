@@ -1,0 +1,21 @@
+
+#Name: Melissa A Vento
+#Email: melissa.vento52@myhunter.cuny.edu
+#Date: May 5, 2020
+#Write an Unix shell script that does the following:
+#Creates 3 additional directories
+#(as subdirectories of projectFiles): images, files, and results.
+#Submit a single text file containing your shell commands.
+
+#Shell script:creates directories for project
+vi projectFiles
+
+mkdir projectFiles
+cd projectFiles
+
+#creates subdirectories for project
+mkdir images
+mkdir files
+mkdir results
+
+./setupProject
