@@ -1,0 +1,33 @@
+#Name : Melissa A Vento
+#Email: melissa.vento52@myhunter.cuny.edu
+#Date: April 14, 2020
+#This program :Write a program that asks the user for a CSV of the NYC OpenData Film Permits
+# then prints out:
+#the total number of permits in the file,
+#the count of permits for each borough, and
+#the five most popular locations (stored in the column: "Parking Held").
+
+#Libraries for plotting and data processing:
+import pandas as pd
+
+#prompts user to enter name of input file
+file = input("Enter file name: ")
+
+#Read in the file to a dataframe
+permits = pd.read_csv(file)
+
+#Print out total number of permits in the file
+shooting = permits["EventType"]
+print(permits["EventType"].value_counts())	
+print("There were" , shooting , "film permits.")
+
+#Print out total number of permits per bourough in the file
+bh = permits["Borough"]
+print(bh)
+print(permits["Borough"].value_counts())	
+
+#print out the five most popular locations (stored in the column: "Parking Held").
+print("The five most popular filming locations were:")
+ph = permits["ParkingHeld"].value_counts()[:5]
+print(ph)
+
