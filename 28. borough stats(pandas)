@@ -1,0 +1,30 @@
+#Name: Melissa A Vento
+#Email: melissa.vento52@myhunter.cuny.edu
+#Date: March 24, 2020
+#This program : Write a program that computes the minimum, maximum,
+#average and standard deviation of the population over time
+#for a borough (entered by the user).
+#Your program should assume that the NYC historical population data file,
+#nycHistPop.csv is in the same directory.
+
+#import Libraries.
+import pandas as pd
+
+#open csv file and store in borough
+pop = pd.read_csv('nycHistPop.csv',skiprows=5)
+
+# prompts user to choose borough
+bh = input("Enter borough:")
+
+#Group the data by location minimum.
+print("Minimum population:", pop[bh].min())
+
+#Group the data by location maximum.
+print("Maximum population:", pop[bh].max())
+
+#Group the data by location average.
+print("Average population:", pop[bh].mean())
+
+#Group the data by location standard deviation.
+print("Standard deviation:", pop[bh].std())
+
