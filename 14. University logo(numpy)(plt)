@@ -1,0 +1,18 @@
+#This program : Colors a red U in the matrix
+
+
+import matplotlib.pyplot as plt #import libraries for plotting
+import numpy as np
+logoImg = np.ones((30,30,3))
+#and for arrays (to hold images) #10x10 array with 3 sheets of 1’s
+
+#To make purple, we’ll keep red and blue at 100% and turn green to 0%
+logoImg[:,:10,1:3] = 0 #Turn the green to 0 for first 3 columns
+logoImg[:,-10:,1:3] = 0 
+logoImg[20:30,:,1:3] = 0 
+
+
+plt.imshow(logoImg)
+plt.show()
+
+plt.imsave("logo.png", logoImg)
