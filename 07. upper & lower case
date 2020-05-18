@@ -1,0 +1,12 @@
+#This program prints: prompts the user for a message,
+# and then prints the message, the message in upper case letters,
+# the message in lower case letters and the number of characters in the message.
+
+
+
+msg = input("Enter a message: ") # Prompts user to enter a message
+print(msg)
+print(msg.upper())
+print(msg.lower())
+print(len(msg))
+
